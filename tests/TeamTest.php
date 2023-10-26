@@ -4,7 +4,7 @@ declare(strict_types=1);
 use App\Classes\Team;
 use PHPUnit\Framework\TestCase;
 
-class TeamTest extends TestCase
+final class TeamTest extends TestCase
 {
     public function testTeamName(): void
     {
