@@ -23,3 +23,6 @@ The boards support the following operations:
 3. Mexico 0 - Canada 5
 4. Argentina 3 - Australia 1
 5. Germany 2 - France 2
+
+## Requirements
+**PHP 8.2**+ and `declare(strict_types=1)`
