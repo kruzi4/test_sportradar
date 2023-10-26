@@ -41,6 +41,7 @@ final class GameTest extends TestCase
             new Team('Ukraine'),
             new Team('Poland')
         );
+        $game->setIsLive();
         $game->updateScore(1, 2);
         $this->assertEquals(1, $game->getHomeTeamScore());
         $this->assertEquals(2, $game->getAwayTeamScore());
@@ -53,6 +54,7 @@ final class GameTest extends TestCase
             new Team('Ukraine'),
             new Team('Poland')
         );
+        $game->setIsLive();
         $game->updateScore(-1, 2);
     }
 
@@ -90,6 +92,7 @@ final class GameTest extends TestCase
             new Team($teamNames[0]),
             new Team($teamNames[1])
         );
+        $game->setIsLive();
         $game->updateScore($score[0], $score[1]);
         $this->assertEquals($expected, $game->getScoreOutput());
     }
@@ -100,6 +103,7 @@ final class GameTest extends TestCase
             new Team('Ukraine'),
             new Team('Poland')
         );
+        $game->setIsLive();
         $game->updateScore(1, 2);
         $this->assertEquals(3, $game->getTotalScore());
     }

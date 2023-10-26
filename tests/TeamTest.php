@@ -10,6 +10,9 @@ final class TeamTest extends TestCase
     {
         $team = new Team('Mexico');
         $this->assertEquals('Mexico', $team->getName());
+
+        $team2 = new Team('   Ukraine ');
+        $this->assertEquals('Ukraine', $team2->getName());
     }
 
     public function testForbiddenTeamName(): void

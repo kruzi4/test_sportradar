@@ -6,12 +6,15 @@ use InvalidArgumentException;
 
 readonly class Team
 {
+    protected string $name;
+
     public function __construct(
-        protected string $name
+        string $name
     ) {
-        empty($name)
-        || (!preg_match("/[\w-]*/", $name)
-            && throw new InvalidArgumentException('Team name cannot be empty or contain invalid characters'));
+        (!preg_match("/[ \w-]*/", $name) || empty($name))
+            && throw new InvalidArgumentException('Team name cannot be empty or contain invalid characters');
+
+        $this->name = trim($name);
     }
 
     public function getName(): string
